@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PushBackToField : MonoBehaviour {
-	Dictionary<Collider, Vector3> initialPositionDict;// = new Dictionary<Collider, Vector3>();
+	Dictionary<Collider2D, Vector3> initialPositionDict;// = new Dictionary<Collider, Vector3>();
 
 	void Awake()
 	{
-		initialPositionDict = new Dictionary<Collider, Vector3> ();
+		initialPositionDict = new Dictionary<Collider2D, Vector3> ();
 	}
 
 	void Update()
@@ -15,7 +15,7 @@ public class PushBackToField : MonoBehaviour {
 		//Debug.Log (string.Format ("dict: {0}", initialPositionDict.Count));
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 		//Debug.Log (string.Format("{0} triggered enter", other.gameObject.name));
 		if (initialPositionDict.ContainsKey(other))
@@ -28,12 +28,12 @@ public class PushBackToField : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerStay(Collider other)
+	void OnTriggerStay2D(Collider2D other)
 	{
 		Push (other);
 	}
 	
-	void OnTriggerExit(Collider other)
+	void OnTriggerExit2D(Collider2D other)
 	{
 		if (initialPositionDict.ContainsKey(other))
 		{
@@ -42,7 +42,7 @@ public class PushBackToField : MonoBehaviour {
 		}
 	}
 	
-	void Push(Collider other)
+	void Push(Collider2D other)
 	{
 		Vector3 initialPosition = Vector3.zero;
 		if (initialPositionDict.ContainsKey(other))

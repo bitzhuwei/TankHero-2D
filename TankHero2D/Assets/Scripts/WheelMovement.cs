@@ -9,14 +9,6 @@ public class WheelMovement : MonoBehaviour {
 	private int current = 0;
 	private float passedInterval = 0;
 
-	void Awake()
-	{
-		if (wheels == null)
-		{
-			wheels = new List<GameObject> ();
-		}
-	}
-
 	// Use this for initialization
 	void Start () {
 		if (wheels != null && wheels.Count > 0)
@@ -46,11 +38,9 @@ public class WheelMovement : MonoBehaviour {
 				if (current == wheels.Count - 1) { current = 0; }
 				else { current++; }
 
-				//wheels [current].SetActive (true);
-				//wheels [tmp].SetActive (false);
 				wheels[current].renderer.enabled = true;
 				wheels[tmp].renderer.enabled = false;
-				Debug.Log(wheels[current].renderer);
+				//Debug.Log(wheels[current].renderer);
 				passedInterval = 0;
 			}
 		}

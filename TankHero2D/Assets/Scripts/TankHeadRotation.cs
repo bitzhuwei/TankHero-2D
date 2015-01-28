@@ -20,6 +20,12 @@ public class TankHeadRotation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (this.transform.rotation.eulerAngles != this.transform.localRotation.eulerAngles)
+		{
+			Debug.LogWarning(string.Format("{0} vs {1}", this.transform.rotation.eulerAngles,
+			                               this.transform.localRotation.eulerAngles));
+		}
+
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;		
 		if(Physics.Raycast(ray, out hit))
@@ -33,7 +39,7 @@ public class TankHeadRotation : MonoBehaviour {
 			{
 				this.targetAngle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
 				//Debug.Log("target angle: " + targetAngle);
-				var angle = this.targetAngle - this.transform.localRotation.eulerAngles.z;
+				var angle = this.targetAngle - this.transform.rotation.eulerAngles.z; //this.transform.localRotation.eulerAngles.z;
 				var maxAngle = rotationSpeed * Time.deltaTime * 50;
 				//Debug.Log(string.Format("{0} vs {1}", angle, maxAngle));
 				//if (angle > maxAngle && maxAngle > 0) { angle = maxAngle; }
