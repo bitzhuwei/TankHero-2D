@@ -46,8 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CursorManager.cs" />
      <Compile Include="Assets\Scripts\BulletFly.cs" />
-     <Compile Include="Assets\Scripts\BulletWeapon.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\DrawMouseInfo.cs" />
      <Compile Include="Assets\Scripts\NormalBulletFly.cs" />
@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\WeaponConfig.cs" />
      <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\WheelMovement.cs" />
+     <Compile Include="Assets\TargetCursor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

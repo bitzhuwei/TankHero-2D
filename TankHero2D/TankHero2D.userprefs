@@ -1,12 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NormalBulletFly.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Temp\ParsedCombinations-Normal-Diffuse.shader">
     <Files>
-      <File FileName="Assets\Scripts\NormalBulletFly.cs" Line="15" Column="3" />
-      <File FileName="Assets\Scripts\BulletFly.cs" Line="6" Column="30" />
-      <File FileName="Assets\Scripts\WeaponManager.cs" Line="42" Column="32" />
-      <File FileName="Assets\WeaponConfig.cs" Line="7" Column="29" />
-      <File FileName="Assets\Scripts\Tags.cs" Line="7" Column="42" />
+      <File FileName="Temp\ParsedCombinations-Normal-Diffuse.shader" Line="1" Column="1" />
+      <File FileName="Assets\CursorManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BulletFly.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NormalBulletFly.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\WeaponManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tags.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PushBackToField.cs" Line="1" Column="1" />
+      <File FileName="Assets\TargetCursor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
