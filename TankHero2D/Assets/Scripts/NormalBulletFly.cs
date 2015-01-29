@@ -10,7 +10,7 @@ public class NormalBulletFly : BulletFly {
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		Debug.Log (string.Format("NormalBulletFly.OnTriggerEnter2D({0})", collider.name));
+		//Debug.Log (string.Format("NormalBulletFly.OnTriggerEnter2D({0})", collider.name));
 		if (this.undying) { return; }
 
 

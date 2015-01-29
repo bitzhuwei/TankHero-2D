@@ -1,15 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Temp\ParsedCombinations-Normal-Diffuse.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WeaponManager.cs">
     <Files>
-      <File FileName="Temp\ParsedCombinations-Normal-Diffuse.shader" Line="1" Column="1" />
-      <File FileName="Assets\CursorManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BulletFly.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NormalBulletFly.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WeaponManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tags.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PushBackToField.cs" Line="1" Column="1" />
-      <File FileName="Assets\TargetCursor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tank1Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TankBaseRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NormalBulletFly.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TankHeadRotation.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

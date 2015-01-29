@@ -7,9 +7,11 @@ public class TankHeadRotation : MonoBehaviour {
 	//public Vector3 targetPosition;
 	public float rotationSpeed = 20f;//degrees
 	private float targetAngle;
+	private Movement movementScript;
 
 	void Awake()
 	{
+		this.movementScript = this.GetComponentInParent<Movement> ();
 		//this.targetPosition = new Vector3 (1, 0, 0);
 	}
 
@@ -22,33 +24,26 @@ public class TankHeadRotation : MonoBehaviour {
 	void Update () {
 		if (this.transform.rotation.eulerAngles != this.transform.localRotation.eulerAngles)
 		{
-			Debug.LogWarning(string.Format("{0} vs {1}", this.transform.rotation.eulerAngles,
+			Debug.LogWarning(string.Format("Tank head's rotation: {0} vs {1}", this.transform.rotation.eulerAngles,
 			                               this.transform.localRotation.eulerAngles));
 		}
 
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;		
-		if(Physics.Raycast(ray, out hit))
+		if (this.movementScript == null) { return; }
+
+		var y = this.movementScript.fireTarget.y - this.transform.position.y;
+		var x = this.movementScript.fireTarget.x - this.transform.position.x;
+		if (Mathf.Abs(y) > Quaternion.kEpsilon || Mathf.Abs(x) > Quaternion.kEpsilon)
 		{
-			var p = hit.point;
-			Debug.DrawRay(Input.mousePosition, p, Color.red, 3, false);
-			var y = p.y - this.transform.position.y;
-			var x = p.x - this.transform.position.x;
-			//var direction = this.targetPosition - this.transform.position;
-			if (Mathf.Abs(y) > Quaternion.kEpsilon || Mathf.Abs(x) > Quaternion.kEpsilon)
-			{
-				this.targetAngle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-				//Debug.Log("target angle: " + targetAngle);
-				var angle = this.targetAngle - this.transform.rotation.eulerAngles.z; //this.transform.localRotation.eulerAngles.z;
-				var maxAngle = rotationSpeed * Time.deltaTime * 50;
-				//Debug.Log(string.Format("{0} vs {1}", angle, maxAngle));
-				//if (angle > maxAngle && maxAngle > 0) { angle = maxAngle; }
-				//else if (angle < -maxAngle && -maxAngle < 0) { angle = -maxAngle; }
-
-				this.transform.RotateAround (this.rotationCenter.position, new Vector3 (0, 0, 1), angle);
-			}
+			this.targetAngle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+			//Debug.Log("target angle: " + targetAngle);
+			var angle = this.targetAngle - this.transform.rotation.eulerAngles.z; //this.transform.localRotation.eulerAngles.z;
+			//var maxAngle = rotationSpeed * Time.deltaTime * 50;
+			//Debug.Log(string.Format("{0} vs {1}", angle, maxAngle));
+			//if (angle > maxAngle && maxAngle > 0) { angle = maxAngle; }
+			//else if (angle < -maxAngle && -maxAngle < 0) { angle = -maxAngle; }
+			
+			this.transform.RotateAround (this.rotationCenter.position, new Vector3 (0, 0, 1), angle);
 		}
-
 
 		/*
 	    this.transform.localRotation = Quaternion.Slerp (

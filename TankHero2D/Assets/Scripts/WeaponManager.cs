@@ -6,12 +6,18 @@ public class WeaponManager : MonoBehaviour {
 	public Transform bulletStartPosition;
 
 	public List<Transform> weapons;
+	public bool autoFire;
 	private int currentIndex;
 	private Transform currentBullet;
 	private WeaponConfig currentWeaponConfig;
-
+	private Movement movementScript;
 	private float passedInterval;
-	
+
+	void Awake()
+	{
+		movementScript = this.GetComponentInParent<Movement> ();
+	}
+
 	// Use this for initialization
 	void Start () {
 		
@@ -25,31 +31,21 @@ public class WeaponManager : MonoBehaviour {
 			SetWeapon(0);
 		}
 		if (currentBullet == null) { return; }
+		if (movementScript == null) { return; }
 
 		passedInterval += Time.deltaTime * 10;
 		if (passedInterval >= currentWeaponConfig.interval)
 		{
-			if (Input.GetButton("Fire1"))
+			if (this.autoFire || Input.GetButton("Fire1"))
 			{
 				passedInterval = 0;
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-				RaycastHit hit;		
-				if(Physics.Raycast(ray, out hit))
-				{
-					var bullet = Instantiate(currentBullet, bulletStartPosition.position, this.transform.rotation) as Transform;
-					bullet.renderer.enabled = true;
-					var bulletFly = bullet.GetComponent<BulletFly>();
-					bulletFly.undying = false;
-					bulletFly.velocity = currentWeaponConfig.velocity;
-					bulletFly.shooter = this.gameObject;
-					bulletFly.targetPosition = hit.point;
-					//Destroy(bullet.gameObject, 5f);
-				}
-				else
-				{
-					Debug.LogError(string.Format ("mouse click not hit anything! input: {0} mouse: {1} | {2}", 
-					                              Input.mousePosition, "null", "null"));
-				}
+				var bullet = Instantiate(currentBullet, bulletStartPosition.position, this.transform.rotation) as Transform;
+				bullet.renderer.enabled = true;
+				var bulletFly = bullet.GetComponent<BulletFly>();
+				bulletFly.undying = false;
+				bulletFly.velocity = currentWeaponConfig.velocity;
+				bulletFly.shooter = this.gameObject;
+				bulletFly.targetPosition = movementScript.fireTarget;
 			}
 		}
 	}
@@ -60,6 +56,6 @@ public class WeaponManager : MonoBehaviour {
 
 		currentIndex = index;
 		currentWeaponConfig = weapons[currentIndex].GetComponent<WeaponConfig>();
-		currentBullet = weapons [currentIndex].FindChild ("Bullet");
+		currentBullet = weapons [currentIndex].GetChild (0);
 	}
 }

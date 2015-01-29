@@ -46,20 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CursorManager.cs" />
      <Compile Include="Assets\Scripts\BulletFly.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\DrawMouseInfo.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\NormalBulletFly.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PushBackToField.cs" />
      <Compile Include="Assets\Scripts\Tags.cs" />
+     <Compile Include="Assets\Scripts\Tank1Movement.cs" />
      <Compile Include="Assets\Scripts\TankBaseRotation.cs" />
      <Compile Include="Assets\Scripts\TankHeadRotation.cs" />
-     <Compile Include="Assets\Scripts\TankHeroMove.cs" />
+     <Compile Include="Assets\Scripts\TargetCursor.cs" />
      <Compile Include="Assets\Scripts\WeaponConfig.cs" />
      <Compile Include="Assets\Scripts\WeaponManager.cs" />
      <Compile Include="Assets\Scripts\WheelMovement.cs" />
-     <Compile Include="Assets\TargetCursor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
