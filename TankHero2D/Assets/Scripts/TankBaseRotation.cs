@@ -32,7 +32,7 @@ public class TankBaseRotation : MonoBehaviour {
 
 		this.transform.rotation = Quaternion.Slerp (
 			this.transform.rotation,
-			Quaternion.Euler (0, 0, angle),
+			this.targetRotation,
 			rotationSpeed * Time.deltaTime);
 	}
 }

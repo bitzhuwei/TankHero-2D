@@ -17,6 +17,8 @@ public class PushBackToField : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+        if (other.tag == Tags.bullet || other.tag == Tags.coin) { return; }
+
 		//Debug.Log (string.Format("{0} triggered enter", other.gameObject.name));
 		if (initialPositionDict.ContainsKey(other))
 		{
@@ -30,12 +32,16 @@ public class PushBackToField : MonoBehaviour {
 	
 	void OnTriggerStay2D(Collider2D other)
 	{
-		Push (other);
+        if (other.tag == Tags.bullet || other.tag == Tags.coin) { return; }
+
+        Push (other);
 	}
 	
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (initialPositionDict.ContainsKey(other))
+        if (other.tag == Tags.bullet || other.tag == Tags.coin) { return; }
+
+        if (initialPositionDict.ContainsKey(other))
 		{
 			//Debug.Log (string.Format("{0} triggered exit", other.gameObject.name));
 			initialPositionDict.Remove(other);

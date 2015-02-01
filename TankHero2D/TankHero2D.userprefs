@@ -1,14 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WeaponManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ProductStatus.cs">
     <Files>
-      <File FileName="Assets\Scripts\WeaponManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Tank1Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TankBaseRotation.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SendTank.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PickedCoin.cs" Line="4" Column="1" />
+      <File FileName="Assets\Scripts\AdjustViewPort.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShowUp.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BlastGoods.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CoinInfo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\NormalBulletFly.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProductStatus.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TankHeadRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TakeDamage.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PushBackToField.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\btnPause.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

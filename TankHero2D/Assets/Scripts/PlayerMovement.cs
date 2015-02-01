@@ -5,6 +5,8 @@ public class PlayerMovement : Movement {
 
 	// Update is called once per frame
 	void Update () {
+        if (Time.deltaTime <= 0) { return; }
+
 		var h = Input.GetAxis ("Horizontal");
 		var v = Input.GetAxis ("Vertical");
 		
@@ -20,10 +22,10 @@ public class PlayerMovement : Movement {
 		{
 			base.fireTarget = hit.point;
 		}
-		else
-		{
-			Debug.LogError(string.Format ("mouse click not hit anything! input: {0} mouse: {1} | {2}", 
-			                              Input.mousePosition, "null", "null"));
-		}
+		//else
+		//{
+		//	Debug.LogError(string.Format ("mouse click not hit anything! input: {0} mouse: {1} | {2}", 
+		//	                              Input.mousePosition, "null", "null"));
+		//}
 	}	
 }

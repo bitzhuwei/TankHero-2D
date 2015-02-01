@@ -6,6 +6,7 @@ public class WeaponManager : MonoBehaviour {
 	public Transform bulletStartPosition;
 
 	public List<Transform> weapons;
+    public bool userControlsFire;
 	public bool autoFire;
 	private int currentIndex;
 	private Transform currentBullet;
@@ -36,16 +37,14 @@ public class WeaponManager : MonoBehaviour {
 		passedInterval += Time.deltaTime * 10;
 		if (passedInterval >= currentWeaponConfig.interval)
 		{
-			if (this.autoFire || Input.GetButton("Fire1"))
+            if ((userControlsFire && Input.GetButton("Fire1")
+                 || ((!userControlsFire) && this.autoFire)))
 			{
 				passedInterval = 0;
 				var bullet = Instantiate(currentBullet, bulletStartPosition.position, this.transform.rotation) as Transform;
 				bullet.renderer.enabled = true;
 				var bulletFly = bullet.GetComponent<BulletFly>();
-				bulletFly.undying = false;
-				bulletFly.velocity = currentWeaponConfig.velocity;
-				bulletFly.shooter = this.gameObject;
-				bulletFly.targetPosition = movementScript.fireTarget;
+                bulletFly.Initiate(currentWeaponConfig, this.transform.parent.gameObject, movementScript);
 			}
 		}
 	}

@@ -28,19 +28,22 @@ public class Tank1Movement : Movement {
 	void Update () {
 		if (tankHero == null) { return; }
 
-		if (this.targeting)
+        var targetPoint = this.tankHero.transform.position;
+        targetPoint.z = this.transform.position.z;
+
+        if (this.targeting)
 		{
-			var direction = (this.tankHero.transform.position - this.transform.position).normalized;
-			base.movingTarget = this.tankHero.transform.position + direction * 3;
+            var direction = (targetPoint - this.transform.position).normalized;
+			base.movingTarget = targetPoint + direction * 3;
 
 			this.targeting = false;
 		}
 
-		base.fireTarget = this.tankHero.transform.position;
+        base.fireTarget = targetPoint;
 		base.baseDirection = (base.movingTarget - this.transform.position).normalized;
 		this.transform.position += base.baseDirection * base.speed * Time.deltaTime;
 
-		if ((this.transform.position - base.movingTarget).magnitude < 0.01f)
+		if ((this.transform.position - base.movingTarget).magnitude < 0.02f)
 		{ 
 			this.targeting = true; 
 		}
