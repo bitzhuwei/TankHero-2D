@@ -25,7 +25,7 @@ public class NormalBulletFly : BulletFly {
 		Debug.Log ("NormalBulletFly.Start()");
 	}
 
-    void Update()
+    new void Update()
     {
         if ((!exploded) && shouldExplode)
         {
@@ -62,8 +62,9 @@ public class NormalBulletFly : BulletFly {
         //Debug.Log (string.Format("NormalBulletFly.OnTriggerEnter2D({0})", collider.name));
         //if (base.undying) { return; }
         if (collider.tag == Tags.coin) { return; }
-        if (base.shooterTag == collider.tag) { return; }
+        //if (base.shooterTag == collider.tag) { return; }
 
+        //Debug.Log(string.Format("{0}'s bullet hit {1}", base.shooterTag, collider.tag));
         this.shouldExplode = true;
     }
 

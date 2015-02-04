@@ -1,0 +1,12 @@
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\UnityEditor.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\UnityEngine.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\nunit.framework.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\obj\Debug\Assembly-CSharp.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\obj\Debug\Assembly-CSharp.pdb
