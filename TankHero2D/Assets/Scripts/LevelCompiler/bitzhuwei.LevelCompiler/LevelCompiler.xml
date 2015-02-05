@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContextfreeGrammar GrammarName="LevelCompiler" Namespace="LevelCompilerNamespace">
+  <source_code_of_CGCompiler>Name:LevelCompiler
+&lt;Level&gt; ::= "level" "{" &lt;TankList&gt; "}";
+&lt;TankList&gt; ::= &lt;Tank&gt; &lt;TankList&gt; | null;
+&lt;Tank&gt; ::= "tank" "{" &lt;TankPrefab&gt; &lt;BornPoint&gt; "}" | "|";
+&lt;TankPrefab&gt; ::= number;
+&lt;BornPoint&gt; ::= number;
+</source_code_of_CGCompiler>
+  <ContextfreeProductionList Count="5">
+    <ContextfreeProduction>
+      <ProductionNode NodeName="Level" NodeNote="Level" Position="NonLeave" />
+      <RightSection CandidateCount="1">
+        <ProductionNodeList NodeCount="4">
+          <ProductionNode NodeName="&quot;level&quot;" NodeNote="&quot;level&quot;" Position="Leave" />
+          <ProductionNode NodeName="&quot;{&quot;" NodeNote="&quot;{&quot;" Position="Leave" />
+          <ProductionNode NodeName="TankList" NodeNote="TankList" Position="NonLeave" />
+          <ProductionNode NodeName="&quot;}&quot;" NodeNote="&quot;}&quot;" Position="Leave" />
+        </ProductionNodeList>
+      </RightSection>
+    </ContextfreeProduction>
+    <ContextfreeProduction>
+      <ProductionNode NodeName="TankList" NodeNote="TankList" Position="NonLeave" />
+      <RightSection CandidateCount="2">
+        <ProductionNodeList NodeCount="2">
+          <ProductionNode NodeName="Tank" NodeNote="Tank" Position="NonLeave" />
+          <ProductionNode NodeName="TankList" NodeNote="TankList" Position="NonLeave" />
+        </ProductionNodeList>
+        <ProductionNodeList NodeCount="1">
+          <ProductionNode NodeName="null" NodeNote="null" Position="Leave" />
+        </ProductionNodeList>
+      </RightSection>
+    </ContextfreeProduction>
+    <ContextfreeProduction>
+      <ProductionNode NodeName="Tank" NodeNote="Tank" Position="NonLeave" />
+      <RightSection CandidateCount="2">
+        <ProductionNodeList NodeCount="5">
+          <ProductionNode NodeName="&quot;tank&quot;" NodeNote="&quot;tank&quot;" Position="Leave" />
+          <ProductionNode NodeName="&quot;{&quot;" NodeNote="&quot;{&quot;" Position="Leave" />
+          <ProductionNode NodeName="TankPrefab" NodeNote="TankPrefab" Position="NonLeave" />
+          <ProductionNode NodeName="BornPoint" NodeNote="BornPoint" Position="NonLeave" />
+          <ProductionNode NodeName="&quot;}&quot;" NodeNote="&quot;}&quot;" Position="Leave" />
+        </ProductionNodeList>
+        <ProductionNodeList NodeCount="1">
+          <ProductionNode NodeName="&quot;|&quot;" NodeNote="&quot;|&quot;" Position="Leave" />
+        </ProductionNodeList>
+      </RightSection>
+    </ContextfreeProduction>
+    <ContextfreeProduction>
+      <ProductionNode NodeName="TankPrefab" NodeNote="TankPrefab" Position="NonLeave" />
+      <RightSection CandidateCount="1">
+        <ProductionNodeList NodeCount="1">
+          <ProductionNode NodeName="number" NodeNote="number" Position="Leave" />
+        </ProductionNodeList>
+      </RightSection>
+    </ContextfreeProduction>
+    <ContextfreeProduction>
+      <ProductionNode NodeName="BornPoint" NodeNote="BornPoint" Position="NonLeave" />
+      <RightSection CandidateCount="1">
+        <ProductionNodeList NodeCount="1">
+          <ProductionNode NodeName="number" NodeNote="number" Position="Leave" />
+        </ProductionNodeList>
+      </RightSection>
+    </ContextfreeProduction>
+  </ContextfreeProductionList>
+</ContextfreeGrammar>

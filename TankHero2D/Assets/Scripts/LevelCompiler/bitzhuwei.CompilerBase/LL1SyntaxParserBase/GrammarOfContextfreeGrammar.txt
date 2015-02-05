@@ -1,0 +1,9 @@
+﻿<Start>     ::= <Vn> "::=" <VList> ";" <PList>; 
+<PList>         ::= <Vn> "::=" <VList> ";" <PList> | null; 
+<VList>     ::= <V> <VOpt>;
+<V>         ::= <Vn> | <Vt> | identifier; 
+<VOpt>      ::= <V> <VOpt> | "|" <V> <VOpt> | null; 
+<Vn>        ::= "<" <VnBody>; 
+<VnBody>     ::= identifier <VnTail>; 
+<VnTail>     ::= ">"; 
+<Vt>        ::= constString; 

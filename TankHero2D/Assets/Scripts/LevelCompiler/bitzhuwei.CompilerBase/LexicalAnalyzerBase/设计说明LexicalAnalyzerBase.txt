@@ -1,0 +1,1 @@
+﻿LexicalAnalyzerBase构造了词法分析器的抽象基类。

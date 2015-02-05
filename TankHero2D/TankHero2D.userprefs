@@ -1,23 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LevelController.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TankHeadRotation.cs">
     <Files>
-      <File FileName="Assets\LevelController.cs" Line="53" Column="40" />
-      <File FileName="Assets\Scripts\SendTank.cs" Line="6" Column="1" />
-      <File FileName="Assets\Scripts\PickedCoin.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AdjustViewPort.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ShowUp.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CoinInfo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NormalBulletFly.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProductStatus.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TakeDamage.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PushBackToField.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\btnPause.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelCompiler\bitzhuwei.LevelCompiler\LexicalAnalyzerLevelCompiler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DrawText.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelController2.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Assets\Scripts\LevelCompiler\bitzhuwei.LevelCompiler\GetLevel.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Tank1Movement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Health.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BlastGoods.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TankHeadRotation.cs" Line="27" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

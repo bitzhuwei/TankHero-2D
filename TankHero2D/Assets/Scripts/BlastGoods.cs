@@ -6,13 +6,13 @@ public class BlastGoods : MonoBehaviour {
 
     public List<Transform> goods;
     private Health healthScript;
-    private LevelController levelController;
+    private LevelController2 levelController;
     void Awake()
     {
         if (goods == null) { goods = new List<Transform>(); }
         healthScript = this.GetComponentInChildren<Health>();
         var levelControllerGameObject = GameObject.FindGameObjectWithTag(Tags.levelController);
-        this.levelController = levelControllerGameObject.GetComponent<LevelController>();
+        this.levelController = levelControllerGameObject.GetComponent<LevelController2>();
     }
 
 	// Use this for initialization
@@ -28,8 +28,9 @@ public class BlastGoods : MonoBehaviour {
         var index = Random.Range(0, goods.Count);
         Instantiate(goods[index], this.transform.position, this.transform.rotation);
 
+        Destroy(this.gameObject);
+
         levelController.EnemyDying(this.gameObject);
 
-        Destroy(this.gameObject);
     }
 }

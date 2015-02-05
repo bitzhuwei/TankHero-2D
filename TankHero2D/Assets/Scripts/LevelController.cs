@@ -49,7 +49,8 @@ public class LevelController : MonoBehaviour {
                 if (Random.Range(0, 1000) < sendSpeed)
                 {
                     var bornTransform = this.enemyBornPoints[bornPointIndex];
-                    var tank = Instantiate(tankPrefabs[0], bornTransform.position, bornTransform.rotation) as Transform;
+                    //var tank = 
+                    Instantiate(tankPrefabs[0], bornTransform.position, bornTransform.rotation);// as Transform;
                     this.bornPointIndex++;
                     if (this.bornPointIndex >= this.enemyBornPoints.Count) { this.bornPointIndex = 0; }
                     passedInterval = 0;

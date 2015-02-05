@@ -1,0 +1,11 @@
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\obj\Debug\UnityVS.TankHero2D.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\obj\Debug\Assembly-CSharp.dll
+C:\Users\DELL\Documents\GitHub\TankHero-2D\TankHero2D\obj\Debug\Assembly-CSharp.pdb
