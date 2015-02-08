@@ -4,6 +4,7 @@ using System.Collections;
 public class ShowUp : MonoBehaviour {
 
     public float showUpSpeed = 1;
+    public float rotationSpeed = 1;
     private SpriteRenderer spriteRenderer;
     private bool goWhite;
 
@@ -19,8 +20,10 @@ public class ShowUp : MonoBehaviour {
     float rotation;
 	// Update is called once per frame
 	void Update () {
-        this.transform.rotation = Quaternion.EulerRotation(0, rotation, 0);
-        rotation += Time.deltaTime * 3;
+        if (Time.deltaTime == 0f) { return; }
+
+        this.transform.rotation = Quaternion.Euler(0, rotation, 0);
+        rotation += Time.deltaTime * rotationSpeed * Mathf.Rad2Deg;
         if (this.goWhite)
         {
             this.spriteRenderer.color = Color.Lerp(this.spriteRenderer.color, Color.white, this.showUpSpeed * Time.deltaTime);
@@ -32,18 +35,18 @@ public class ShowUp : MonoBehaviour {
                 this.goWhite = false;
             }
         }
-        else
-        {
-            return;
-            this.spriteRenderer.color = Color.Lerp(this.spriteRenderer.color, initialColor, this.showUpSpeed * Time.deltaTime);
+        //else
+        //{
+        //    return;
+        //    this.spriteRenderer.color = Color.Lerp(this.spriteRenderer.color, initialColor, this.showUpSpeed * Time.deltaTime);
 
-            //Debug.Log(string.Format("A: {0}", this.spriteRenderer.color.a));
-            if (Mathf.Abs(initialColor.a - this.spriteRenderer.color.a) <= 0.02f)
-            {
-                this.spriteRenderer.color = initialColor;
-                this.goWhite = true;
-            }
-        }
+        //    //Debug.Log(string.Format("A: {0}", this.spriteRenderer.color.a));
+        //    if (Mathf.Abs(initialColor.a - this.spriteRenderer.color.a) <= 0.02f)
+        //    {
+        //        this.spriteRenderer.color = initialColor;
+        //        this.goWhite = true;
+        //    }
+        //}
 
 	}
 }

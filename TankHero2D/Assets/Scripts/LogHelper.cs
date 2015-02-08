@@ -11,30 +11,31 @@ public class LogHelper : MonoBehaviour
     private static readonly object synObj = new object();
     void Awake()
     {
+
+    }
+
+    private static void Initialize()
+    {
         if (writer == null)
         {
             lock (synObj)
             {
                 if (writer == null)
                 {
-                    Initialize();
+                    string path = Application.dataPath;
+                    if (Application.platform == RuntimePlatform.Android)
+                    {
+                        path = Application.persistentDataPath;
+                    }
+
+                    var logFilename = string.Format("{0}.log", System.DateTime.Now.ToString("yyyyMMdd_HHmmss"));
+                    logFullname = Path.Combine(path, logFilename);
+                    writer = new StreamWriter(logFullname, true);
+                    Debug.Log(string.Format("log file {0} is ready.", logFullname));
                 }
             }
         }
-    }
-
-    private void Initialize()
-    {
-        string path = Application.dataPath;
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            path = Application.persistentDataPath;
-        }
-
-        var logFilename = string.Format("{0}.log", System.DateTime.Now.ToString("yyyyMMdd_HHmmss"));
-        logFullname = Path.Combine(path, logFilename);
-        writer = new StreamWriter(logFullname, true);
-        Debug.Log(string.Format("log file {0} is ready.", logFullname));
+        
     }
 
     // Use this for initialization
@@ -52,13 +53,21 @@ public class LogHelper : MonoBehaviour
 
     public static void Log(object message)
     {
-        if (writer == null) { return; }
+        if (writer == null)
+        {
+            Initialize();
+            if (writer == null) { return; }
+        }
 
         writer.WriteLine(message);
     }
     public static void Log(string format, params object[] args)
     {
-        if (writer == null) { return; }
+        if (writer == null)
+        {
+            Initialize();
+            if (writer == null) { return; }
+        }
 
         writer.WriteLine(string.Format(format, args));
     }

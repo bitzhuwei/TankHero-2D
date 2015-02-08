@@ -28,10 +28,8 @@ public class SendTank : MonoBehaviour {
         {
             if (Random.Range(0, 1000) < sendSpeed)
             {
-                var tank = Instantiate(tankPrefab, this.transform.position, this.transform.rotation) as Transform;
+                Instantiate(tankPrefab, this.transform.position, this.transform.rotation);
                 status.tankCount++;
-                var factoryInfo = tank.GetComponent<FactoryInfo>();
-                factoryInfo.factory = this.gameObject.transform;
                 passedInterval = 0;
             }
         }

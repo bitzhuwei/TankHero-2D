@@ -54,10 +54,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AdjustViewPort.cs" />
     <Compile Include="Assets\Scripts\BlastGoods.cs" />
     <Compile Include="Assets\Scripts\BulletFly.cs" />
-    <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Camera\AdjustViewPort.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CoinInfo.cs" />
     <Compile Include="Assets\Scripts\CoinManager.cs" />
     <Compile Include="Assets\Scripts\DrawText.cs" />
@@ -111,11 +111,11 @@
     <Compile Include="Assets\Scripts\TankBaseRotation.cs" />
     <Compile Include="Assets\Scripts\TankHeadRotation.cs" />
     <Compile Include="Assets\Scripts\TargetCursor.cs" />
+    <Compile Include="Assets\Scripts\UI\btnPause.cs" />
+    <Compile Include="Assets\Scripts\UI\btnRestart.cs" />
     <Compile Include="Assets\Scripts\WeaponConfig.cs" />
     <Compile Include="Assets\Scripts\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\WheelMovement.cs" />
-    <Compile Include="Assets\Scripts\btnPause.cs" />
-    <Compile Include="Assets\Scripts\btnRestart.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\LevelCompiler.txt" />
