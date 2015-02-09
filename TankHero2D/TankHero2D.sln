@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{07C58605-95FF-5445-E6ED-C938C1BD368C}") = "TankHero2D", "Assembly-CSharp.csproj", "{99577131-C796-0898-C51C-89F3F3B44824}"
 EndProject
+Project("{07C58605-95FF-5445-E6ED-C938C1BD368C}") = "TankHero2D", "Assembly-UnityScript.unityproj", "{EB32B679-82F7-CC5C-FE08-675F36FFE271}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{99577131-C796-0898-C51C-89F3F3B44824}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99577131-C796-0898-C51C-89F3F3B44824}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99577131-C796-0898-C51C-89F3F3B44824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB32B679-82F7-CC5C-FE08-675F36FFE271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB32B679-82F7-CC5C-FE08-675F36FFE271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB32B679-82F7-CC5C-FE08-675F36FFE271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB32B679-82F7-CC5C-FE08-675F36FFE271}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																															GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																							GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
