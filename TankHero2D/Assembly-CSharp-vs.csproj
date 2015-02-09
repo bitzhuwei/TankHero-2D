@@ -46,19 +46,19 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Frameworks\Detonator\System\Detonator.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorBurstEmitter.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorCloudRing.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorFireball.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorForce.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorGlow.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorHeatwave.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorLight.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorShockwave.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorSmoke.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorSound.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorSparks.cs" />
-     <Compile Include="Assets\Frameworks\Detonator\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Detonator\System\Detonator.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Detonator\System\DetonatorSpray.cs" />
      <Compile Include="Assets\GoBackToCollision.cs" />
      <Compile Include="Assets\Scripts\Bullet\BulletFly.cs" />
      <Compile Include="Assets\Scripts\Bullet\NormalBulletFly.cs" />
@@ -118,7 +118,7 @@
      <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
      <Compile Include="Assets\TriggerTest.cs" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\LexicalAnalyzerBase\设计说明LexicalAnalyzerBase.txt" />
-     <None Include="Assets\Frameworks\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
+     <None Include="Assets\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Scripts\LevelCompiler\LevelCompiler.txt" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\Core\设计说明Core.txt" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\LL1SyntaxParserBase\设计说明LL1SyntaxParserBase.txt" />

@@ -1,8 +1,8 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-12996
+Pipe name: \\.\pipe\UnityShaderCompiler-1-16508
 Cmd: getPlatforms
 Cmd: preprocess
-  error: 1 plat 12 at (38): Compiling shaders to OpenGL ES 2.0, Xbox 360, PS3, Flash or DX11 requires both vertex and fragment programs
-  insize=3308 outsize=2426 ok=1
+  insize=2483 outsize=1166 ok=1
 Cmd: compileSnippet
-  api=0 type=1 insize=1168 outsize=467 kw= ok=1
+  error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
+  api=4 type=0 insize=1623 outsize=0 kw= ok=0

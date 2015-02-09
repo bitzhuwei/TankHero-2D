@@ -46,10 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Frameworks\Detonator\Sample Supporting Emitters\Detonator Spray Helper.js" />
-     <Compile Include="Assets\Frameworks\Detonator\TestScene\DetonatorTest.js" />
+     <Compile Include="Assets\Detonator\Sample Supporting Emitters\Detonator Spray Helper.js" />
+     <Compile Include="Assets\Detonator\TestScene\DetonatorTest.js" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\LexicalAnalyzerBase\设计说明LexicalAnalyzerBase.txt" />
-     <None Include="Assets\Frameworks\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
+     <None Include="Assets\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Scripts\LevelCompiler\LevelCompiler.txt" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\Core\设计说明Core.txt" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\LL1SyntaxParserBase\设计说明LL1SyntaxParserBase.txt" />
