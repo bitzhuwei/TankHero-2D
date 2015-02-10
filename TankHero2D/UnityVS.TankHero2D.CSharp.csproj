@@ -7,14 +7,16 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{0AE6467A-6606-2EF2-9413-A2196F9B9E30}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>4.6.1f1</UnityVersion>
@@ -73,11 +75,14 @@
     <Compile Include="Assets\Scripts\Camera\AdjustViewPort.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameController.cs" />
-    <Compile Include="Assets\Scripts\GameManager\LevelController.cs" />
+    <Compile Include="Assets\Scripts\GameManager\HeroConfig.cs" />
     <Compile Include="Assets\Scripts\GameManager\LevelController2.cs" />
     <Compile Include="Assets\Scripts\GameManager\LevelLoader.cs" />
+    <Compile Include="Assets\Scripts\GameManager\LevelStart.cs" />
     <Compile Include="Assets\Scripts\GameManager\ProductStatus.cs" />
-    <Compile Include="Assets\Scripts\GameManager\SendTank.cs" />
+    <Compile Include="Assets\Scripts\GameManager\SendHero.cs" />
+    <Compile Include="Assets\Scripts\GameManager\UpgradeSystem\Tuple.cs" />
+    <Compile Include="Assets\Scripts\GameManager\UpgradeSystem\UpgradeConfig.cs" />
     <Compile Include="Assets\Scripts\Goods\CoinInfo.cs" />
     <Compile Include="Assets\Scripts\Goods\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Goods\PickedCoin.cs" />
@@ -118,6 +123,8 @@
     <Compile Include="Assets\Scripts\UI\DrawText.cs" />
     <Compile Include="Assets\Scripts\UI\GameStart\btnQuitGameStart.cs" />
     <Compile Include="Assets\Scripts\UI\GameStart\btnstartGameStart.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\btnSpeedUpgradeOfStore.cs" />
+    <Compile Include="Assets\Scripts\UI\Store\btnokOfStore.cs" />
     <Compile Include="Assets\Scripts\UI\TargetCursor.cs" />
     <Compile Include="Assets\Scripts\UI\btnPause.cs" />
     <Compile Include="Assets\Scripts\UI\btnRestart.cs" />
@@ -125,6 +132,7 @@
     <Compile Include="Assets\Scripts\Weapon\WeaponConfig.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
     <Compile Include="Assets\TriggerTest.cs" />
+    <Compile Include="Assets\txtMoneyUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />

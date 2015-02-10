@@ -65,11 +65,14 @@
      <Compile Include="Assets\Scripts\Camera\AdjustViewPort.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\GameManager\GameController.cs" />
-     <Compile Include="Assets\Scripts\GameManager\LevelController.cs" />
+     <Compile Include="Assets\Scripts\GameManager\HeroConfig.cs" />
      <Compile Include="Assets\Scripts\GameManager\LevelController2.cs" />
      <Compile Include="Assets\Scripts\GameManager\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\GameManager\LevelStart.cs" />
      <Compile Include="Assets\Scripts\GameManager\ProductStatus.cs" />
-     <Compile Include="Assets\Scripts\GameManager\SendTank.cs" />
+     <Compile Include="Assets\Scripts\GameManager\SendHero.cs" />
+     <Compile Include="Assets\Scripts\GameManager\UpgradeSystem\Tuple.cs" />
+     <Compile Include="Assets\Scripts\GameManager\UpgradeSystem\UpgradeConfig.cs" />
      <Compile Include="Assets\Scripts\Goods\CoinInfo.cs" />
      <Compile Include="Assets\Scripts\Goods\CoinManager.cs" />
      <Compile Include="Assets\Scripts\Goods\PickedCoin.cs" />
@@ -110,6 +113,8 @@
      <Compile Include="Assets\Scripts\UI\DrawText.cs" />
      <Compile Include="Assets\Scripts\UI\GameStart\btnQuitGameStart.cs" />
      <Compile Include="Assets\Scripts\UI\GameStart\btnstartGameStart.cs" />
+     <Compile Include="Assets\Scripts\UI\Store\btnSpeedUpgradeOfStore.cs" />
+     <Compile Include="Assets\Scripts\UI\Store\btnokOfStore.cs" />
      <Compile Include="Assets\Scripts\UI\TargetCursor.cs" />
      <Compile Include="Assets\Scripts\UI\btnPause.cs" />
      <Compile Include="Assets\Scripts\UI\btnRestart.cs" />
@@ -117,6 +122,7 @@
      <Compile Include="Assets\Scripts\Weapon\WeaponConfig.cs" />
      <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
      <Compile Include="Assets\TriggerTest.cs" />
+     <Compile Include="Assets\txtMoneyUpdate.cs" />
      <None Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\LexicalAnalyzerBase\设计说明LexicalAnalyzerBase.txt" />
      <None Include="Assets\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Scripts\LevelCompiler\LevelCompiler.txt" />

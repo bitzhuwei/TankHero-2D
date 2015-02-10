@@ -35,6 +35,7 @@ public class WeaponManager : MonoBehaviour {
 		if (currentBullet == null) { return; }
 		if (movementScript == null) { return; }
 
+        if (Time.deltaTime == 0) { return; }
 		passedInterval += Time.deltaTime * 10;
 		if (passedInterval >= currentWeaponConfig.interval)
 		{

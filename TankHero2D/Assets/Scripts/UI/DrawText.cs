@@ -7,6 +7,7 @@ public class DrawText : MonoBehaviour {
     private GameObject tankHero;
     private CoinManager coinManagerScript;
     private Health healthScript;
+    private PlayerMovement playerMovement;
     private LevelController2 levelController;
 
     void Awake()
@@ -23,6 +24,7 @@ public class DrawText : MonoBehaviour {
         if (tankHero == null) { return; }
         coinManagerScript = tankHero.GetComponent<CoinManager>();
         healthScript = tankHero.GetComponentInChildren<Health>();
+        playerMovement = tankHero.GetComponent<PlayerMovement>();
     }
     
     // Use this for initialization
@@ -75,7 +77,8 @@ public class DrawText : MonoBehaviour {
         }
         
         builder.AppendLine(string.Format("money: {0}", coinManagerScript.money));
-        builder.AppendLine(string.Format("health: {0}/{1}", healthScript.health, healthScript.maxHealth));
+        builder.AppendLine(string.Format("HP: {0}/{1}", healthScript.HP, healthScript.fullHP));
+        builder.AppendLine(string.Format("Speed:{0}", playerMovement.speed));
         
     }
 

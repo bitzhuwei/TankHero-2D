@@ -17,7 +17,7 @@ public class TakeDamage : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (this.healthScript.health <= 0) { return; }
+        if (this.healthScript.HP <= 0) { return; }
 
         var bulletFlyScript = other.GetComponent<BulletFly>();
         if (bulletFlyScript == null) { return; }

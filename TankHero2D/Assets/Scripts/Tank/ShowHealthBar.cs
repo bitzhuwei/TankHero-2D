@@ -46,7 +46,7 @@ public class ShowHealthBar : MonoBehaviour {
         {
             var screenLeftTop = Camera.main.WorldToScreenPoint(this.leftTop.position);
             var screenRightBottom = Camera.main.WorldToScreenPoint(this.rightBottom.position);
-            var width = (screenRightBottom.x - screenLeftTop.x) * this.health.health / this.health.maxHealth;
+            var width = (screenRightBottom.x - screenLeftTop.x) * this.health.HP / this.health.fullHP;
             var height = screenRightBottom.y - screenLeftTop.y;
             var rect = new Rect(screenLeftTop.x, Screen.height - screenLeftTop.y - height, width, height);
 

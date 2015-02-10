@@ -19,7 +19,7 @@ public class CoinManager : MonoBehaviour {
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            var maxHealing = (int)(healthScript.maxHealth - healthScript.health);
+            var maxHealing = (int)(healthScript.fullHP - healthScript.HP);
             if (money >= maxHealing)
             {
                 money -= maxHealing;

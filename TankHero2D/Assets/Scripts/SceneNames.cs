@@ -6,4 +6,5 @@ public class SceneNames
 	public const string DetonatorTestWall = "Detonator-TestWall";
     public const string gameStart = "GameStart";
     public const string freeLevel = "FreeLevel";
+    public const string store = "Store";
 }

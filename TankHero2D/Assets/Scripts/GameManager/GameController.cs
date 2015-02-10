@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.GameManager;
 
 public class GameController : MonoBehaviour {
 
     public static GameController instance;
     public int id;
     private static int idCounter = 0;
+    public HeroConfig heroConfig;
+
     void Awake()
     {
         if (instance == null)
         {
+            heroConfig = new HeroConfig();
+
             instance = this;
             this.id = idCounter++;
             DontDestroyOnLoad(this.gameObject);

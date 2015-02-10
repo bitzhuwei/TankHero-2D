@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Health : MonoBehaviour {
 
-	public float maxHealth = 100;
-	public float health = 100;
+	public float fullHP = 100;
+	public float HP = 100;
 	public float lastDamageTime;
 	public float lastFillTime;
 
@@ -21,26 +21,26 @@ public class Health : MonoBehaviour {
 
 	public void TakeDamage(float value)
 	{
-		if (this.health <= 0) { return; }
+		if (this.HP <= 0) { return; }
 
-		if (this.health <= value)
-		{ this.health = 0f; }
+		if (this.HP <= value)
+		{ this.HP = 0f; }
 		else
 		{
-			this.health -= value;
+			this.HP -= value;
 			lastDamageTime = Time.time;
 		}
 	}
 
 	public void FillHealth(float value)
 	{
-		if (this.health >= this.maxHealth) { return; }
+		if (this.HP >= this.fullHP) { return; }
 
-        if (this.maxHealth - this.health <= value)
-        { this.health = this.maxHealth; }
+        if (this.fullHP - this.HP <= value)
+        { this.HP = this.fullHP; }
         else
         {
-            this.health += value;
+            this.HP += value;
             lastFillTime = Time.time;
         }
 	}

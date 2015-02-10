@@ -26,7 +26,7 @@ public class TankDead : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (healthScript.health > 0) { return; }
+        if (healthScript.HP > 0) { return; }
         if (goods == null || goods.Count < 1) { return; }
 
         var index = Random.Range(0, goods.Count);

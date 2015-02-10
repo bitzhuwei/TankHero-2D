@@ -1,8 +1,7 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-16508
+Pipe name: \\.\pipe\UnityShaderCompiler-1-15748
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=2483 outsize=1166 ok=1
 Cmd: compileSnippet
-  error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)
-  api=4 type=0 insize=1623 outsize=0 kw= ok=0
+  api=0 type=0 insize=1623 outsize=652 kw= ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=1623 outsize=496 kw= ok=1

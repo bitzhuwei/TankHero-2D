@@ -18,6 +18,6 @@ public class btnstartGameStart : MonoBehaviour {
     {
         if (clickSound != null)
         { AudioSource.PlayClipAtPoint(clickSound, Camera.main.transform.position); }
-        Application.LoadLevel(SceneNames.freeLevel);
+        Application.LoadLevel(SceneNames.store);
     }
 }
