@@ -4,12 +4,6 @@ using System.Collections;
 public class PickedCoin : MonoBehaviour {
 
     public AudioClip pickedAudioClip;
-    private bool picked;
-
-    void Awake()
-    {
-        this.picked = false;
-    }
 
 	// Use this for initialization
 	void Start () {
@@ -25,11 +19,7 @@ public class PickedCoin : MonoBehaviour {
     {
         if (other.tag != Tags.hero) { return; }
 
-        if (!this.picked)
-        {
-            this.picked = true;
-            AudioSource.PlayClipAtPoint(pickedAudioClip, this.transform.position, 0.2f);
-            MonoBehaviour.Destroy(this.gameObject);
-        }
+        AudioSource.PlayClipAtPoint(pickedAudioClip, this.transform.position, 0.2f);
+        MonoBehaviour.Destroy(this.gameObject);
     }
 }

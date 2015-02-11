@@ -23,6 +23,7 @@ public class SendHero : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (Time.deltaTime == 0) { return; }
         passedInterval += Time.deltaTime;
         if (passedInterval < sendInterval) { return; }
 
