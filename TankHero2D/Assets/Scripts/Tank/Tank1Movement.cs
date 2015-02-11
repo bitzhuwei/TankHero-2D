@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Tank1Movement : Movement
 {
-
+    public Transform targetFlag;
+    private Transform lastTargetFlag;
     private GameObject tankHero;
     private bool targeting;//looking for the target
 
@@ -38,7 +39,11 @@ public class Tank1Movement : Movement
         {
             var direction = (targetPoint - this.transform.position).normalized;
             base.movingTarget = targetPoint + direction * 3;
-
+            if (this.targetFlag != null)
+            {
+                if (this.lastTargetFlag != null) { Destroy(this.lastTargetFlag.gameObject); }
+                lastTargetFlag = Instantiate(targetFlag, base.movingTarget, this.transform.rotation) as Transform;
+            }
             this.targeting = false;
         }
 
@@ -71,6 +76,14 @@ public class Tank1Movement : Movement
             float top = Screen.height - screenPosition.y - targetTexture.height / 2;
             var rect = new Rect(left, top, targetTexture.width, targetTexture.height);
             GUI.DrawTexture(rect, targetTexture);
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (this.lastTargetFlag != null)
+        {
+            Destroy(this.lastTargetFlag.gameObject);
         }
     }
 }

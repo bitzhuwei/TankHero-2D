@@ -28,7 +28,7 @@ public class PickedCoin : MonoBehaviour {
         if (!this.picked)
         {
             this.picked = true;
-            AudioSource.PlayClipAtPoint(pickedAudioClip, this.transform.position);
+            AudioSource.PlayClipAtPoint(pickedAudioClip, this.transform.position, 0.2f);
             MonoBehaviour.Destroy(this.gameObject);
         }
     }

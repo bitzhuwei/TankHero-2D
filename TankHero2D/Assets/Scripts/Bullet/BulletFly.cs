@@ -4,9 +4,9 @@ using System.Collections;
 public abstract class BulletFly : MonoBehaviour {
 
     //public bool undying;
-    public float velocity { get;set; }
-    public string shooterTag { get;set; }
-    public Vector3 targetPosition { get;set; }
+    public float velocity;// { get;set; }
+    public string shooterTag;// { get;set; }
+    public Vector3 targetPosition;// { get;set; }
     protected float passedTime;
 
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public abstract class BulletFly : MonoBehaviour {
         passedTime += Time.deltaTime;
 	}
 
-    public abstract void Initiate(WeaponConfig weaponConfig, GameObject shooter, Movement movementScript);//,
+    public abstract void Initiate(float velocity, string shooterTag, Vector3 targetPosition);//,
 //                                  bool enableRenderer = true, bool undying = false);
 
 	public abstract float GetDamage (Transform gameObject);

@@ -69,7 +69,7 @@
     <Compile Include="Assets\Detonator\System\DetonatorSpray.cs" />
     <Compile Include="Assets\GoBackToCollision.cs" />
     <Compile Include="Assets\Scripts\Bullet\BulletFly.cs" />
-    <Compile Include="Assets\Scripts\Bullet\NormalBulletFly.cs" />
+    <Compile Include="Assets\Scripts\Bullet\CanonBulletFly.cs" />
     <Compile Include="Assets\Scripts\Camera\AdjustViewPort.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameController.cs" />
@@ -128,8 +128,9 @@
     <Compile Include="Assets\Scripts\UI\btnPause.cs" />
     <Compile Include="Assets\Scripts\UI\btnRestart.cs" />
     <Compile Include="Assets\Scripts\Wall\PushBackToField.cs" />
-    <Compile Include="Assets\Scripts\Weapon\WeaponConfig.cs" />
-    <Compile Include="Assets\Scripts\Weapon\WeaponManager.cs" />
+    <Compile Include="Assets\Scripts\Weapon\CanonWeapon.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Weapon\WeaponSelector.cs" />
     <Compile Include="Assets\TriggerTest.cs" />
     <Compile Include="Assets\txtMoneyUpdate.cs" />
   </ItemGroup>
