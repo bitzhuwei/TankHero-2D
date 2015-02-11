@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PickedCoin : MonoBehaviour {
 
+    public AudioClip pickedAudioClip;
     private bool picked;
 
     void Awake()
@@ -27,6 +28,7 @@ public class PickedCoin : MonoBehaviour {
         if (!this.picked)
         {
             this.picked = true;
+            AudioSource.PlayClipAtPoint(pickedAudioClip, this.transform.position);
             MonoBehaviour.Destroy(this.gameObject);
         }
     }

@@ -60,9 +60,6 @@ public class WeaponManager : MonoBehaviour {
 
 	}
 
-    public int x;
-    public float y;
-    
 	public void SetWeapon(int index)
 	{
 		if (index < 0 || index >= this.weapons.Count) { return; }
