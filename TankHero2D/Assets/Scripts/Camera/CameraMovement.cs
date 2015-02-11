@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+        this.catchingSpeed = GameController.instance.heroConfig.fullSpeed;
 	}
 	
 	// Update is called once per frame

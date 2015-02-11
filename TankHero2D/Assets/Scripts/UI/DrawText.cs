@@ -76,7 +76,7 @@ public class DrawText : MonoBehaviour {
             return;
         }
         
-        builder.AppendLine(string.Format("money: {0}", coinManagerScript.money));
+        builder.AppendLine(string.Format("money: {0}", GameController.instance.heroConfig.money));
         builder.AppendLine(string.Format("HP: {0}/{1}", healthScript.HP, healthScript.fullHP));
         builder.AppendLine(string.Format("Speed:{0}", playerMovement.speed));
         

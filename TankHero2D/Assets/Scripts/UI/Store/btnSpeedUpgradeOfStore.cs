@@ -35,18 +35,18 @@ public class btnSpeedUpgradeOfStore : MonoBehaviour
     void Start()
     {
         txtSpeed = this.transform.parent.GetComponentInChildren<UnityEngine.UI.Text>();
-        UpdateSpeedBox();
+        //UpdateSpeedBox();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        UpdateSpeedBox();
     }
 
     public void btnSpeedUpgrade_Click()
     {
         GameController.instance.heroConfig.UpgradeSpeed();
-        UpdateSpeedBox();
+        //UpdateSpeedBox();
     }
 }

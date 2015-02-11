@@ -8,9 +8,11 @@ public class WheelMovement : MonoBehaviour {
 	public List<GameObject> wheels;
 	private int current = 0;
 	private float passedInterval = 0;
+    private int heroSpeed = 3;
 
 	// Use this for initialization
 	void Start () {
+        heroSpeed = GameController.instance.heroConfig.fullSpeed;
 		if (wheels != null && wheels.Count > 0)
 		{ wheels[0].renderer.enabled = true; }
 
@@ -29,7 +31,7 @@ public class WheelMovement : MonoBehaviour {
 		
 		if (Mathf.Abs(h) > Quaternion.kEpsilon || Mathf.Abs(v) > Quaternion.kEpsilon)
 		{
-			passedInterval += Time.deltaTime * 100;
+			passedInterval += Time.deltaTime * 20 * heroSpeed;
 			//Debug.Log (passedInterval);
 			if (passedInterval >= interval)
 			{

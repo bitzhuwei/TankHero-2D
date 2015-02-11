@@ -3,8 +3,8 @@ using System.Collections;
 
 public class CoinManager : MonoBehaviour {
 
-    public int money;
     private Health healthScript;
+    private HeroConfig heroConfig;
 
     void Awake()
     {
@@ -13,6 +13,7 @@ public class CoinManager : MonoBehaviour {
 
     void Start()
     {
+        heroConfig = GameController.instance.heroConfig;
     }
 
     void Update()
@@ -20,15 +21,15 @@ public class CoinManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.LeftShift))
         {
             var maxHealing = (int)(healthScript.fullHP - healthScript.HP);
-            if (money >= maxHealing)
+            if (heroConfig.money >= maxHealing)
             {
-                money -= maxHealing;
+                heroConfig.money -= maxHealing;
                 healthScript.FillHealth(maxHealing);
             }
             else
             {
-                var healing = money;
-                money = 0;
+                var healing = heroConfig.money;
+                heroConfig.money = 0;
                 healthScript.FillHealth(healing);
             }
         }
@@ -42,21 +43,21 @@ public class CoinManager : MonoBehaviour {
         if (coinInfo == null) { return; }
         if (coinInfo.value > 0)
         {
-            if (this.money >= int.MaxValue - coinInfo.value)
-            { this.money = int.MaxValue; }
-            else 
-            { this.money += coinInfo.value; }
+            if (heroConfig.money >= int.MaxValue - coinInfo.value)
+            { heroConfig.money = int.MaxValue; }
+            else
+            { heroConfig.money += coinInfo.value; }
         }
         else
         {
-            if (this.money < int.MinValue - coinInfo.value)
-            { this.money = 0; }
+            if (heroConfig.money < int.MinValue - coinInfo.value)
+            { heroConfig.money = 0; }
             else 
             {
-                this.money += coinInfo.value;
+                heroConfig.money += coinInfo.value;
 
-                if (this.money < 0) 
-                { this.money = 0; }
+                if (heroConfig.money < 0)
+                { heroConfig.money = 0; }
             }
         }
     }

@@ -113,6 +113,7 @@
      <Compile Include="Assets\Scripts\UI\DrawText.cs" />
      <Compile Include="Assets\Scripts\UI\GameStart\btnQuitGameStart.cs" />
      <Compile Include="Assets\Scripts\UI\GameStart\btnstartGameStart.cs" />
+     <Compile Include="Assets\Scripts\UI\Store\btnHPUpgradeOfStore.cs" />
      <Compile Include="Assets\Scripts\UI\Store\btnSpeedUpgradeOfStore.cs" />
      <Compile Include="Assets\Scripts\UI\Store\btnokOfStore.cs" />
      <Compile Include="Assets\Scripts\UI\TargetCursor.cs" />
