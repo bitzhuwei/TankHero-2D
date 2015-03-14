@@ -5,7 +5,6 @@ public class DrawText : MonoBehaviour {
     
     UnityEngine.UI.Text txtInfo;
     private GameObject tankHero;
-    private CoinManager coinManagerScript;
     private Health healthScript;
     private PlayerMovement playerMovement;
     private LevelController2 levelController;
@@ -22,7 +21,6 @@ public class DrawText : MonoBehaviour {
     {
         tankHero = GameObject.FindGameObjectWithTag(Tags.hero);
         if (tankHero == null) { return; }
-        coinManagerScript = tankHero.GetComponent<CoinManager>();
         healthScript = tankHero.GetComponentInChildren<Health>();
         playerMovement = tankHero.GetComponent<PlayerMovement>();
     }
@@ -70,7 +68,7 @@ public class DrawText : MonoBehaviour {
     {
         if (tankHero == null) { UpdateTankHero(); }
         
-        if (tankHero == null || coinManagerScript == null || healthScript == null) 
+        if (tankHero == null ||  healthScript == null) 
         {
             builder.AppendLine("tank heor not found!"); 
             return;

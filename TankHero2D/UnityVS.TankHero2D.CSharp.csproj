@@ -82,7 +82,6 @@
     <Compile Include="Assets\Scripts\GameManager\UpgradeSystem\Tuple.cs" />
     <Compile Include="Assets\Scripts\GameManager\UpgradeSystem\UpgradeConfig.cs" />
     <Compile Include="Assets\Scripts\Goods\CoinInfo.cs" />
-    <Compile Include="Assets\Scripts\Goods\CoinManager.cs" />
     <Compile Include="Assets\Scripts\Goods\PickedCoin.cs" />
     <Compile Include="Assets\Scripts\Goods\ShowUp.cs" />
     <Compile Include="Assets\Scripts\LevelCompiler\bitzhuwei.CompilerBase\Core\CandidateFunction.cs" />
